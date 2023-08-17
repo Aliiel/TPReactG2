@@ -1,30 +1,29 @@
-import React from 'react';
-
-
-const Flags = () => {
-    const [flags, setFlags] = useState([])
+import React, { useState , useEffect } from 'react'; 
+import ProductCard from '../components/ProductCard';
+const Products = () => {
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
-        
-        fetch("https://restcountries.com/v3.1/all")
+
+        fetch('https://fakestoreapi.com/products')
             .then(response => response.json())
-            .then(data => setFlags(data))
+            .then(data => setProducts(data))
     },[])
 
 
   return (
 
 
-      <div className='flags'>
+      <div className='Produits'>
 
-          {flags.map ((flag, index) => 
+          {products.map ((product, index) => 
 
-            <FlagCard key = {index} flag = {flag}/>
-         
+            <ProductCard key = {index} product = {product}/>
+
           )};
 
       </div>
   )
 }
 
-export default Flags
+export default Products
