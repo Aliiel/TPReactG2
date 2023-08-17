@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Cart from './pages/Cart';
 import SignUp from './pages/SignUp';
 import Products from './pages/Home';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
     </Routes>
 
     <Products/>
+
+    <Footer/>
 
     </div>
   )
