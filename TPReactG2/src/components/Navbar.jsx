@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,7 +15,7 @@ const Navbar = () => {
             <Link to = "/Search">Rechercher :<input></input></Link>
             </div>
             <Link to = "/Login">Se connecter</Link>
-            <Link to = "/SignUp">S'inscrire</Link>
+            <Link to = "/Signup">S'inscrire</Link>
 
         </nav>
     )
