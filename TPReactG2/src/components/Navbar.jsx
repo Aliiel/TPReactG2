@@ -13,7 +13,7 @@ const Navbar = () => {
             <Link to = "/Cart">Panier</Link>
             <Link to = "/Login">Se connecter</Link>
             <Link to = "/Signup">S'inscrire</Link>
-
+            
         </nav>
     )
 }
