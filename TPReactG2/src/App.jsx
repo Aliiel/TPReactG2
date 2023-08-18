@@ -1,5 +1,5 @@
 import './App.css'
-import Navbar from './components/Navbar'
+import Header from './components/Header'
 import Profile from './pages/Profile';
 import {Routes, Route} from "react-router-dom";
 import Login from './pages/Login';
@@ -16,7 +16,7 @@ function App() {
 
     <div className = "app">
 
-    <Navbar/>
+    <Header/>
     <Routes>
     <Route path ="/Home" element = {<Products/>}/>
     <Route path ="/Profile" element={<Profile/>}/>
