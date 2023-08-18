@@ -82,9 +82,10 @@ p{
 }
 
 .Produit{
-  background-color: rgb(255, 255, 255);
+  
+  border: 5px solid rgb(25, 15, 68) ;
   width: 200px;
-  margin: 15px auto;
+  margin: 15px 30px;
   color: rgb(0, 0, 0);
   font-size: 1rem;
   padding: 10px;
@@ -93,16 +94,20 @@ p{
   align-items: center;
   justify-content: space-around;
   border-radius: 10px;
+  height: 20rem;
+  
 }
 
 .Produit img{
   width: 150px;
   height: 150px;
+  border-radius: 10px;
 }
 
 .Produits{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .voir{
