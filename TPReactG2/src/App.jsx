@@ -7,7 +7,7 @@ import Cart from './pages/Cart';
 import SignUp from './pages/SignUp';
 import Products from './pages/Home';
 import Footer from './components/Footer';
-
+import ProductDetail from './components/ProductDetail';
 
 function App() {
 
@@ -18,13 +18,15 @@ function App() {
 
     <Navbar/>
     <Routes>
+    <Route path ="/Home" element = {<Products/>}/>
     <Route path ="/Profile" element={<Profile/>}/>
     <Route path ="/Login" element = {<Login/>}/>
     <Route path ="/Cart" element = {<Cart/>}/>
     <Route path ="/SignUp" element = {<SignUp/>}/>
+    <Route path ="/Product/:id" element ={<ProductDetail/>}/>
+    <Route path ="/" element= {<Products/>}/>
     </Routes>
 
-    <Products/>
 
     <Footer/>
 
