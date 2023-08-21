@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="copyright">
-        &copy; {new Date().getFullYear()} VotreNom. Tous droits réservés.
+        &copy; {new Date().getFullYear()} MODB. Tous droits réservés.
       </div>
       <div className="social-links">
         <a href="lien_vers_instagram">Instagram</a>
