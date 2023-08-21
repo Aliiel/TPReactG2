@@ -14,13 +14,23 @@ const ProductDetail = () => {
     }, [])
 
     return( 
-        <div>
+    <div className='Article'>
         
-        <p>Titre : {product.title}</p>
+        <h1>Titre : {product.title}</h1>
         {console.log(product.title , "Mon Titre")}
-        
+        <div className='affichageArticle'>
+            <img className='photoProduit' src={product.image}></img>
+
+            <div className='description'>
+                <h2>Catégorie : {product.category}</h2>
+                <p>{product.description}</p>
+                <p className='prix'>prix : {product.price}€</p>
+                <bouton className='ajouterPanier'>Ajouter au panier</bouton>
+            </div>
         
         </div>
+        
+    </div>
             
         )
 }
