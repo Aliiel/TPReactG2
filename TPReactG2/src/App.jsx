@@ -27,6 +27,7 @@ function App() {
     <Route path ="/" element= {<Products/>}/>
     </Routes>
 
+   
 
     <Footer/>
 
