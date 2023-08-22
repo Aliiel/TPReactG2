@@ -71,7 +71,7 @@ body{
 }
 
 footer {
-  background-color: #333;
+  background-color: #0e0c0c;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -95,6 +95,8 @@ footer {
 .footer .social-links a:hover {
   color: #66ccff;
 }
+
+
 .voir{
   background-color: black;
   border: 3px solid white;
@@ -111,25 +113,4 @@ footer {
 }
 
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer .copyright {
-  font-size: 14px;
-}
-
-.footer .social-links {
-  margin-top: 10px;
-}
-
-.footer .social-links a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 18px;
-}
 
