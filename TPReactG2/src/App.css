@@ -1,6 +1,41 @@
+@font-face {
+  font-family: 'Archivo Black';
+  src: url(../src/assets/font/ArchivoBlack-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'RaleWayRegular';
+  src: url(../src/assets/font/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: 'RaleWayExtraLight';
+  src: url(../src/assets/font/Raleway-ExtraLight.ttf);
+}
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
 body{
-  background-color: rgb(172, 198, 106);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+}
+
+h1{
+  font-family: 'Archivo Black';
+}
+
+h2{
+  font-family: 'RaleWayRegular';
+}
+
+p{
+  font-family: 'RaleWayRegular';
 }
 
 #root {
@@ -47,9 +82,10 @@ body{
 }
 
 .Produit{
-  background-color: rgb(255, 255, 255);
+  
+  border: 5px solid rgb(25, 15, 68) ;
   width: 200px;
-  margin: 15px auto;
+  margin: 15px 30px;
   color: rgb(0, 0, 0);
   font-size: 1rem;
   padding: 10px;
@@ -58,16 +94,20 @@ body{
   align-items: center;
   justify-content: space-around;
   border-radius: 10px;
+  height: 20rem;
+  
 }
 
 .Produit img{
   width: 150px;
   height: 150px;
+  border-radius: 10px;
 }
 
 .Produits{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 footer {
@@ -105,12 +145,131 @@ footer {
   border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.5s;
+  font-family: 'Archivo Black';
 }
 
 
 .voir:hover {
   transform: scale(120%);
 }
+
+.ajouterPanier{
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+    width: 30%;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  text-align: center;
+  font-family: 'Archivo Black';
+}
+
+.ajouterPanier:hover{
+  background-color: rgb(0, 0, 0);
+  border: 5px solid rgb(255, 255, 255);
+  color: whitesmoke;
+
+}
+
+.Article{
+  display: flex;
+flex-direction: column;
+margin: 50px auto;
+}
+
+.photoProduit{
+width: 300px;
+}
+
+.affichageArticle{
+  display: flex;
+  justify-content: space-around;
+}
+
+.description{
+  width: 30%;
+  text-align: left;
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
+}
+
+.prix{
+  font-size: 1.4rem;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border : 5px black solid;
+  align-items: center;
+  border-radius: 10px;
+  background-color: black;
+  text-decoration: none;
+}
+
+
+.profile {
+  background-color: black;
+  border: 3px solid white;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  font-family: 'Archivo Black';
+  
+}
+
+.panier {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  font-family: 'Archivo Black';
+}
+
+.recherche {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  font-family: 'Archivo Black';
+  width: 500px;
+  
+}
+
+.connecter {
+  background-color: black;
+  border: 3px solid white;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  font-family: 'Archivo Black';
+  text-decoration: none;
+}
+
+.inscrire {
+  background-color: black;
+  border: 3px solid white;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  font-family: 'Archivo Black';
+}
+
+
 
 
 
