@@ -1,9 +1,19 @@
 import React, { useState , useEffect } from 'react'; 
 import ProductCard from '../components/ProductCard';
 import Categorie  from '../components/Categorie';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 const Products = () => {
     const [products, setProducts] = useState([])
 
+    const [category, setCategory] = useState('')
+
+    const categories = [
+      "women's clothing",
+"jewelery",
+"men's clothing",
+"electronics"
+    ]
     useEffect(() => {
 
         fetch('https://fakestoreapi.com/products')
@@ -12,11 +22,16 @@ const Products = () => {
     },[])
 
 
+
+
   return (
 
 
 <div className='Acceuil'>
   
+
+<video src=".\src\assets\video\hero.mp4" type='video/mp4' autoPlay loop width="100%"></video>
+
   <h1>Catégories</h1>
 
     <div className='categories'>  

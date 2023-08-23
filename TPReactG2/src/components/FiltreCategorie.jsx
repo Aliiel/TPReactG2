@@ -1,32 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 
-const CategorieList = ({ category }) => {
-  const [elements, setElements] = useState([]);
-
-  useEffect(() => {
-    const fetchElements = async () => {
-      try {
-        const response = await axios.get(`"https://fakestoreapi.com/products/category=${category}`);
-        setElements(response.data);
-      } catch (error) {
-        console.error('Error fetching elements:', error);
-      }
-    };
-
-    fetchElements();
-  }, [category]);
-
+const CategoryFilter = ({ products, activeCategory, onCategoryClick }) => {
   return (
-    <div className="element-list">
-      <h2>Elements in Category: {category}</h2>
+    <div className="category-filter">
+      <h2>Categories</h2>
       <ul>
-        {elements.map(element => (
-          <li key={element.id}>{element.name}</li>
+        {products.map(category => (
+          <li
+            key={category}
+            className={category === activeCategory ? 'active' : ''}
+            onClick={() => onCategoryClick(category)}
+          >
+            {category}
+            
+          </li>
+          
         ))}
       </ul>
     </div>
   );
 };
 
-export default CategorieList;
+export default CategoryFilter;
