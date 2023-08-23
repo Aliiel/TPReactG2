@@ -1,19 +1,12 @@
 import React, { useState , useEffect } from 'react'; 
 import ProductCard from '../components/ProductCard';
-import Categorie  from '../components/Categorie';
-import Slider from 'rc-slider';
-import 'rc-slider/assets/index.css';
+import Categorie from '../components/Categorie.jsx'
+
 const Products = () => {
     const [products, setProducts] = useState([])
 
-    const [category, setCategory] = useState('')
+ 
 
-    const categories = [
-      "women's clothing",
-"jewelery",
-"men's clothing",
-"electronics"
-    ]
     useEffect(() => {
 
         fetch('https://fakestoreapi.com/products')
@@ -46,13 +39,13 @@ const Products = () => {
       <h1>Nos articles les mieux notés </h1>
       <br/>
       <div className='Produits'>
-       {products.map ((product, index) => 
+      
 
             <ProductCard key = {index} product = {product}/>
 
-          )};
       
       
+
       </div>
          
 </div>
