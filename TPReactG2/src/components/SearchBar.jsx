@@ -57,7 +57,7 @@ const SearchBar = () => {
             return (
                 <div className='search_result' key = {val.id} onClick={ () => goToProduct(val.id)}>
         
-                    <h1>Titre : {val.title}</h1>
+                    <h1>- {val.title}</h1>
         
                        
         
