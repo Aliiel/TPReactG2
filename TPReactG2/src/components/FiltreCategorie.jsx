@@ -5,7 +5,7 @@ const CategoryFilter = ({ products, activeCategory, onCategoryClick }) => {
     <div className="category-filter">
       <h2>Categories</h2>
       <ul>
-        {products.map(category => (
+        {products.map(products.category => (
           <li
             key={category}
             className={category === activeCategory ? 'active' : ''}
