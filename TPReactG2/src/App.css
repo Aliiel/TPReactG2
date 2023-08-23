@@ -334,7 +334,7 @@ nav {
 }
 
 .recherche input {
-  border-radius: 10%;
+  border-radius: 20px;
 }
 
 .connecter {
@@ -348,6 +348,23 @@ nav {
   font-family: 'Archivo Black';
 }
 
+.connecter:hover{
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+}
+
+.connecter a{
+  text-decoration: none;
+  color: white;
+  height: 140%;
+}
+
+.connecter a:hover{
+  color: black;
+  size: COVER;
+}
+
 .inscrire {
   background-color: black;
   border: 3px solid white;
@@ -357,10 +374,27 @@ nav {
   cursor: pointer;
   transition: ease-in-out 0.5s;
   font-family: 'Archivo Black';
+  
+}
+
+.inscrire:hover{
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+}
+
+.inscrire a{
+  text-decoration: none;
+  color: white;
+  transition: ease-in-out 0.5s;
+}
+
+.inscrire a:hover{
+  color: black;
 }
 
 .loupe {
-  background-color: white;
+  
 }
 
 
