@@ -302,26 +302,7 @@ nav {
   border-radius: 50%;
 }
 
-.profile {
-  background-color: black;
-  border: 3px solid white;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.5s;
-  font-family: 'Archivo Black';
-}
 
-.panier {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.5s;
-  font-family: 'Archivo Black';
-}
 
 .recherche {
   background-color: black;
@@ -393,10 +374,12 @@ nav {
   color: black;
 }
 
-.loupe {
-  
+.search_results {
+  position: absolute;
+  background: black;
+  width: 30%;
+  top:15%;
 }
-
 
 
 

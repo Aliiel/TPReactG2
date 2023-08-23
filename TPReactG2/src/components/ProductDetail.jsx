@@ -12,7 +12,7 @@ const ProductDetail = () => {
         fetch("https://fakestoreapi.com/products/" + params.id)
             .then(response => response.json())
         .then(data => setProduct(data))
-    }, [])
+    }, [params.id])
 
     return( 
     <div className='Article'>
