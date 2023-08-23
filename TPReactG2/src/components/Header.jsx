@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/images/MODB_blanc.png'
 import LogoPanier from '../assets/images/logo-panier.png'
-import LogoRecherche from '../assets/images/logo-recherche.avif'
+import LogoRecherche from '../assets/images/logo-loupe.png'
 
 
 
@@ -20,7 +20,7 @@ const Header = () => {
             
             <div className = 'recherche'> 
             <input style = {{width : '400px', height : '25px'}} placeholder='Rechercher'></input>
-            <div className = 'loupe'><img src = {LogoRecherche} style = {{width : '30px', height : '25px'}}></img></div>
+            <div className = 'loupe'><img src = {LogoRecherche} style = {{width : '30px', height : '30px'}}></img></div>
             </div>
 
             <div className = 'connecter'>
