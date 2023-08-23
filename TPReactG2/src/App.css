@@ -194,6 +194,54 @@ padding : 0;
   transform: scale(120%);
 }
 
+
+.ajouterPanier{
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+    width: 30%;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  text-align: center;
+  font-family: 'Archivo Black';
+}
+
+.ajouterPanier:hover{
+  background-color: rgb(0, 0, 0);
+  border: 5px solid rgb(255, 255, 255);
+  color: whitesmoke;
+
+}
+
+.Article{
+  display: flex;
+flex-direction: column;
+margin: 50px auto;
+}
+
+.photoProduit{
+width: 300px;
+}
+
+.affichageArticle{
+  display: flex;
+  justify-content: space-around;
+}
+
+.description{
+  width: 30%;
+  text-align: left;
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
+}
+
+.prix{
+  font-size: 1.4rem;
+}
+
 .voirCategorie{
   background-color: black;
   border: 3px solid white;
@@ -298,26 +346,7 @@ nav {
   border-radius: 50%;
 }
 
-.profile {
-  background-color: black;
-  border: 3px solid white;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.5s;
-  font-family: 'Archivo Black';
-}
 
-.panier {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.5s;
-  font-family: 'Archivo Black';
-}
 
 .recherche {
   background-color: black;
@@ -389,7 +418,9 @@ nav {
   color: black;
 }
 
-
+.loupe {
+  
+}
 
 
 
