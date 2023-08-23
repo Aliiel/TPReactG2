@@ -1,6 +1,11 @@
 import React from 'react';
 
-const CategoryFilter = ({ products, activeCategory, onCategoryClick }) => {
+const CategoryFilter = ({ products}) => {
+ 
+
+
+ 
+ 
   return (
     <div className="category-filter">
       <h2>Categories</h2>

@@ -31,6 +31,11 @@ h1{
   font-family: 'Archivo Black';
 }
 
+
+#hero{
+  z-index: -1;
+}
+
 h2{
   font-family: 'RaleWayRegular';
 }
@@ -71,6 +76,29 @@ padding : 0;
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+.authentif{
+  background-color:#ffffff;
+  border: 3px solid #acfe26;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  font-family: 'Archivo Black';
+}
+
+.authentif:hover{
+  background-color: #acfe26;
+  color: black;
+  border: 3px solid #ffffff ;
+}
+
+.authentif a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  height: 140%;
 }
 
 .card {
@@ -340,10 +368,16 @@ nav {
   border : 5px black solid;
   align-items: center;
   background-color: black;
+  flex-wrap: wrap;
 }
 
 .logo img {
   border-radius: 50%;
+  transition: ease-in-out 0.5s;
+}
+.logo img:hover{
+  border-radius: 50%;
+  box-shadow: 0px 0px 40px #acfe26;
 }
 
 
@@ -356,70 +390,32 @@ nav {
   font-family: 'Archivo Black';
   width: 500px;
   display: flex;
+  align-items: center;
 }
 
 .recherche input {
   border-radius: 20px;
-}
-
-.connecter {
-  background-color: black;
-  border: 3px solid white;
-  color: white;
   padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.5s;
-  font-family: 'Archivo Black';
+  width: 100%;
 }
 
-.connecter:hover{
-  background-color: white;
-  color: black;
-  border: 3px solid black;
-}
-
-.connecter a{
-  text-decoration: none;
-  color: white;
-  height: 140%;
-}
-
-.connecter a:hover{
-  color: black;
-  size: COVER;
-}
-
-.inscrire {
-  background-color: black;
-  border: 3px solid white;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: ease-in-out 0.5s;
-  font-family: 'Archivo Black';
+.searchResult{
+  margin: 2% auto;
+transition: ease-in-out 0.3s;
   
 }
 
-.inscrire:hover{
-  background-color: white;
-  color: black;
-  border: 3px solid black;
+.searchResult:hover{
+background-color: #acfe26;
+
 }
 
-.inscrire a{
-  text-decoration: none;
-  color: white;
-  transition: ease-in-out 0.5s;
-}
-
-.inscrire a:hover{
-  color: black;
-}
-
-.loupe {
-  
+.search_results {
+  position: absolute;
+  background: black;
+  width: 30%;
+  top:15%;
+  z-index: 1;
 }
 
 

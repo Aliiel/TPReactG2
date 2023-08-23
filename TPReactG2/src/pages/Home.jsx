@@ -23,7 +23,7 @@ const Products = () => {
 <div className='Acceuil'>
   
 
-<video src=".\src\assets\video\hero.mp4" type='video/mp4' autoPlay loop width="100%"></video>
+<video id='hero' src=".\src\assets\video\hero.mp4" type='video/mp4' autoPlay loop width="100%"></video>
 
   <h1>Catégories</h1>
 
@@ -39,9 +39,14 @@ const Products = () => {
       <h1>Nos articles les mieux notés </h1>
       <br/>
       <div className='Produits'>
-      
 
-            <ProductCard key = {index} product = {product}/>
+      {products.map ((product, index) => 
+
+        <ProductCard key = {index} product = {product}/>
+
+      )};
+
+          
 
       
       
