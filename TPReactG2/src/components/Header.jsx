@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logo from '../assets/images/MODB_blanc.png'
-import LogoPanier from '../assets/images/logo-panier.png'
-import LogoRecherche from '../assets/images/logo-loupe.png'
+import Logo from '../assets/images/MODB_blanc.png';
+import LogoPanier from '../assets/images/logo-panier.png';
+import LogoRecherche from '../assets/images/logo-loupe.png';
+
 
 
 
 
 
 const Header = () => {
+
+   
 
     return (
 
