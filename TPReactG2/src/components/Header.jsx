@@ -22,15 +22,15 @@ const Header = () => {
             </div>
             
             <div className='recherche'>
+            <SearchBar/>
              <Link to = "/Search"> <img src = {LogoRecherche} style = {{width : '30px', height : '30px'}}></img></Link>
-             <SearchBar/>
             </div>
            
-            <div className = 'connecter'>
+            <div className = 'connecter authentif'>
             <Link to = "/Login">Connectez-vous</Link>
             </div>
 
-            <div className = 'inscrire'>
+            <div className = 'inscrire authentif'>
             <Link to = "/Signup">Inscription</Link>
             </div>
 
