@@ -110,6 +110,74 @@ p{
   justify-content: center;
 }
 
+.footer {
+  background-color: #060505;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #66ccff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #555;
+  font-size: 12px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-links img {
+  width: 27px; 
+  height: 27px;
+  margin: 0 10px; 
+  opacity: 0.6; 
+}
+
+.social-links img:hover {
+  opacity: 1; 
+  cursor: pointer; 
+}
+
+
 .voir{
   background-color: black;
   border: 3px solid white;
@@ -124,6 +192,54 @@ p{
 
 .voir:hover {
   transform: scale(120%);
+}
+
+
+.ajouterPanier{
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+    width: 30%;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  text-align: center;
+  font-family: 'Archivo Black';
+}
+
+.ajouterPanier:hover{
+  background-color: rgb(0, 0, 0);
+  border: 5px solid rgb(255, 255, 255);
+  color: whitesmoke;
+
+}
+
+.Article{
+  display: flex;
+flex-direction: column;
+margin: 50px auto;
+}
+
+.photoProduit{
+width: 300px;
+}
+
+.affichageArticle{
+  display: flex;
+  justify-content: space-around;
+}
+
+.description{
+  width: 30%;
+  text-align: left;
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
+}
+
+.prix{
+  font-size: 1.4rem;
 }
 
 .ajouterPanier{
@@ -246,5 +362,7 @@ nav {
 .loupe {
   background-color: white;
 }
+
+
 
 
