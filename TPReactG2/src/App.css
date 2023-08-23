@@ -247,11 +247,12 @@ nav {
   justify-content: space-between;
   border : 5px black solid;
   align-items: center;
-  border-radius: 10px;
   background-color: black;
-  text-decoration: none;
 }
 
+.logo img {
+  border-radius: 50%;
+}
 
 .profile {
   background-color: black;
@@ -262,7 +263,6 @@ nav {
   cursor: pointer;
   transition: ease-in-out 0.5s;
   font-family: 'Archivo Black';
-  
 }
 
 .panier {
@@ -279,12 +279,14 @@ nav {
   background-color: black;
   color: white;
   padding: 10px;
-  border-radius: 10px;
   cursor: pointer;
-  transition: ease-in-out 0.5s;
   font-family: 'Archivo Black';
   width: 500px;
-  
+  display: flex;
+}
+
+.recherche input {
+  border-radius: 10%;
 }
 
 .connecter {
@@ -296,7 +298,6 @@ nav {
   cursor: pointer;
   transition: ease-in-out 0.5s;
   font-family: 'Archivo Black';
-  text-decoration: none;
 }
 
 .inscrire {
@@ -310,6 +311,9 @@ nav {
   font-family: 'Archivo Black';
 }
 
+.loupe {
+  background-color: white;
+}
 
 
 
