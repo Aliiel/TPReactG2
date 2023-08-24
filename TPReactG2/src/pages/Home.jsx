@@ -1,19 +1,28 @@
 import React, { useState , useEffect } from 'react'; 
 import ProductCard from '../components/ProductCard';
 import CategorieCard from '../components/Categorie';
+import AffiCategories from './Catégories';
 
 
 const Products = () => {
     const [products, setProducts] = useState([])
 
+    const [categories, setCategories] = useState([])
+
  
 
     useEffect(() => {
 
-        fetch('https://fakestoreapi.com/products')
-            .then(response => response.json())
-            .then(data => setProducts(data))
-    },[])
+      fetch('https://fakestoreapi.com/products')
+        .then(response => response.json())
+        .then(data => setProducts(data))
+  
+      // Appel API pour récupérer les catégories
+         fetch('https://fakestoreapi.com/products/categories')
+        .then(response => response.json())
+        .then(data => setCategories(data))
+        .catch(error => console.error("Erreur lors de la récupération des catégories :", error));
+    }, [])
 
 
 
@@ -28,12 +37,11 @@ const Products = () => {
 
   <h1>Catégories</h1>
 
-    <div className='categories'>  
-        <CategorieCard title="women's clothing" />
-        <CategorieCard title="jewelery" />
-        <CategorieCard title="men's clothing" />
-        <CategorieCard title="electronics" />
-  </div>
+  <div className='categories'>
+        {categories.map(category => (
+          <CategorieCard key={category} title={category} />
+        ))}
+      </div>
      
     
 

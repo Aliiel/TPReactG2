@@ -3,8 +3,8 @@ import Women from '../assets/images/vetement-femme.jpg';
 import Men from '../assets/images/vetement-homme.jpg';
 import Electronique from '../assets/images/electronique.jpg';
 import Jewelery from '../assets/images/jewelery.jpg';
-import { useState } from 'react';
-import CategoryProducts from './FiltreCategorie';
+
+
 // import { useNavigate } from 'react-router-dom';
 
 //Selection d'image en fonction du titre
@@ -34,8 +34,7 @@ const CategorieCard = ({ title }) => {
 
 
 const handleClick=(category)=>{
-  navigate("/categories/${category}");
-
+  window.location.href = (`/products/${category}`);
 }
 
 const TitreCat= () => {
@@ -46,8 +45,8 @@ const TitreCat= () => {
   return (
     <div className='categorieCard'>
       <CategorieImage title={title} />
-      <h2> <TitreCat/> </h2>
-      <button className='voirCategorie' onClick={() => CategoryProducts(title)}>Consulter</button>
+      <h2> {title} </h2>
+      <button className='voirCategorie' onClick={() => handleClick(title)}>Consulter</button>
     </div>
   );
 };
