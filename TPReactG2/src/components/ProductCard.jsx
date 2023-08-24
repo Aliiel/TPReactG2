@@ -21,7 +21,7 @@ const ProductCard = ({ product} ) => {
     <img src={ product.image }></img> 
      <p> { product.title }  </p>
      <p>   { product.price} € </p>
-    <boutton className='voir'>Consulter</boutton>
+    <button className='voir'>Consulter</button>
     
     </div>
   )

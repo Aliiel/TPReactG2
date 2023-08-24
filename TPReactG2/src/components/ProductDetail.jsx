@@ -1,6 +1,8 @@
 import React, { useEffect , useState } from 'react'
 import ProductCard from './ProductCard'
 import { useParams } from 'react-router-dom';
+import Stars from './Rating';
+
 
 const ProductDetail = () => {
 
@@ -11,13 +13,16 @@ const ProductDetail = () => {
         fetch("https://fakestoreapi.com/products/" + params.id)
             .then(response => response.json())
         .then(data => setProduct(data))
-    }, [])
+    }, [params.id])
+
+
 
     return( 
+       
     <div className='Article'>
         
         <h1>Titre : {product.title}</h1>
-        {console.log(product.title , "Mon Titre")}
+        {console.log(product.title)}
         <div className='affichageArticle'>
             <img className='photoProduit' src={product.image}></img>
 
@@ -25,19 +30,16 @@ const ProductDetail = () => {
                 <h2>Catégorie : {product.category}</h2>
                 <p>{product.description}</p>
                 <p className='prix'>prix : {product.price}€</p>
-                <bouton className='ajouterPanier'>Ajouter au panier</bouton>
+                <Stars/>
+                <button className='ajouterPanier'>Ajouter au panier</button>
             </div>
         
         </div>
         
     </div>
-            
         )
 }
     
    
 
-
-
-
-export default ProductDetail;
+export default ProductDetail

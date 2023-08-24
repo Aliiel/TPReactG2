@@ -21,6 +21,7 @@
 
 
 
+
 body{
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -28,6 +29,11 @@ body{
 
 h1{
   font-family: 'Archivo Black';
+}
+
+
+#hero{
+  z-index: -1;
 }
 
 h2{
@@ -39,13 +45,12 @@ p{
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+width: 100%;
+padding : 0;
   text-align: center;
 }
 
-.logo {
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -56,7 +61,7 @@ p{
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
+} */
 
 @keyframes logo-spin {
   from {
@@ -71,6 +76,36 @@ p{
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+.authentif{
+  background-color:#ffffff;
+  border: 3px solid #acfe26;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  font-family: 'Archivo Black';
+}
+
+.authentif:hover{
+  background-color: #acfe26;
+  color: black;
+  border: 3px solid #ffffff ;
+}
+
+.authentif a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  height: 140%;
+}
+
+.panier a img{
+  transition: ease-in-out 0.4s;
+}
+.panier a img:hover{
+  transform:rotate(40deg);
 }
 
 .card {
@@ -110,6 +145,74 @@ p{
   justify-content: center;
 }
 
+.footer {
+  background-color: #060505;
+  color: #fff;
+  padding: 40px 0;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #66ccff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #555;
+  font-size: 12px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-links img {
+  width: 27px; 
+  height: 27px;
+  margin: 0 10px; 
+  opacity: 0.6; 
+}
+
+.social-links img:hover {
+  opacity: 1; 
+  cursor: pointer; 
+}
+
+
 .voir{
   background-color: black;
   border: 3px solid white;
@@ -125,6 +228,102 @@ p{
 .voir:hover {
   transform: scale(120%);
 }
+
+
+.ajouterPanier{
+  background-color: rgb(255, 255, 255);
+  border: 3px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 10px;
+    width: 30%;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  text-align: center;
+  font-family: 'Archivo Black';
+}
+
+.ajouterPanier:hover{
+  background-color: rgb(0, 0, 0);
+  border: 5px solid rgb(255, 255, 255);
+  color: whitesmoke;
+
+}
+
+.Article{
+  display: flex;
+flex-direction: column;
+}
+
+.photoProduit{
+width: 300px;
+}
+
+.affichageArticle{
+  display: flex;
+  justify-content: space-around;
+}
+
+.description{
+  width: 30%;
+  text-align: left;
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
+}
+
+.prix{
+  font-size: 1.4rem;
+}
+
+.voirCategorie{
+  background-color: black;
+  border: 3px solid white;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease-in-out 0.5s;
+  font-family: 'Archivo Black';
+}
+
+
+.voirCategorie:hover {
+  transform: scale(120%);
+}
+
+.categorieCard{
+ 
+  
+    border: 5px solid rgb(45, 45, 45) ;
+    width: 200px;
+    margin: 15px 30px;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    height: 20rem;
+    background-color: black;
+   
+}
+
+.categorieCard img{
+  width: 70%;
+  border-radius: 10px;
+}
+
+.categories{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 5% auto;
+}
+
+
 
 .ajouterPanier{
   background-color: rgb(255, 255, 255);
@@ -173,3 +372,159 @@ width: 300px;
   font-size: 1.4rem;
 
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  border : 5px black solid;
+  align-items: center;
+  background-color: black;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  border-radius: 50%;
+  transition: ease-in-out 0.5s;
+}
+.logo img:hover{
+  border-radius: 50%;
+  box-shadow: 0px 0px 40px #acfe26;
+}
+
+
+
+.recherche {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Archivo Black';
+  width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.recherche input {
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.searchResult{
+  margin: 2% auto;
+transition: ease-in-out 0.3s;
+  
+}
+
+.searchResult:hover{
+background-color: #acfe26;
+
+}
+
+.search_results {
+  position: absolute;
+  background: black;
+  width: 30%;
+  top:15%;
+  z-index: 1;
+}
+
+.inscrire a{
+  text-decoration: none;
+  color: black;
+  transition: ease-in-out 0.5s;
+}
+
+.inscrire a:hover{
+  color: black;
+}
+
+
+.form-cadre{
+  background-color: black;
+  margin-bottom: 50px;
+  margin-top : 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width:40%;
+  margin-left: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mdpoublie a {
+  color: white;
+  text-decoration: none;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3ebeb;
+
+}
+
+.login-titre{
+  margin-top: 35px; 
+}
+
+button {
+  background-color: #fcf6f6;
+  color: rgb(7, 5, 5); 
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:disabled {
+  background-color: #faf0f0; 
+  cursor: not-allowed;
+}
+
+.login-mdp{
+  margin-top: 20px;
+}
+
+.form-inscription{
+  
+  background-color: black;
+  color: white;
+  margin-bottom: 50px;
+  margin-top : 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width:60%;
+  margin-left: 19%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inscription input {
+  width: 200px;
+  margin-top: 10px; 
+  margin-bottom: 15px;
+  align-self: center;
+}
+
+.titre-inscription {
+  margin-top: 30px;
+}
+
+
+.form-inscription button {
+  width : 10%;
+  align-self: center;
+}
+
+
+
+
+
+
+
+
+
