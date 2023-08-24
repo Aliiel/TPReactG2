@@ -1,6 +1,6 @@
 import React, { useState , useEffect } from 'react'; 
 import ProductCard from '../components/ProductCard';
-import Categorie from '../components/Categorie.jsx'
+import CategorieCard from '../components/Categorie';
 
 const Products = () => {
     const [products, setProducts] = useState([])
@@ -28,10 +28,10 @@ const Products = () => {
   <h1>Catégories</h1>
 
     <div className='categories'>  
-        <Categorie title="women's clothing" />
-        <Categorie title="jewelery" />
-        <Categorie title="men's clothing" />
-        <Categorie title="electronics" />
+        <CategorieCard title="women's clothing" />
+        <CategorieCard title="jewelery" />
+        <CategorieCard title="men's clothing" />
+        <CategorieCard title="electronics" />
   </div>
      
     

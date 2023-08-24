@@ -311,6 +311,11 @@ width: 300px;
    
 }
 
+.categorieCard img{
+  width: 70%;
+  border-radius: 10px;
+}
+
 .categories{
   display: flex;
   flex-wrap: wrap;
