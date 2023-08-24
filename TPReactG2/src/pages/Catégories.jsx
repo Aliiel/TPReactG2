@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import CategoryFilter from './CategoryFilter';
+
+
 
 const AffiCategories = () => {
   const [products, setProducts] = useState([]);
