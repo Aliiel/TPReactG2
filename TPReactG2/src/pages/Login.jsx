@@ -34,6 +34,7 @@ const Login = () => (
           <Field type="password" name="password" />
           <ErrorMessage name="password" component="div" />
           <br></br><br></br>
+          <p id = "mdpoublie"><a href = "">Mot de passe oublié ?</a></p>
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>

@@ -1,14 +1,53 @@
-import React from 'react';
+import React, { useState} from 'react';
 
 
-const SignUp = () => {
+async function loginUser(credentials) {
+
+    return fetch ('https://fakestoreapi.com/users', {
+        method : 'POST'})
+        .then (data => data.json());
+};
+
+export default function SignIn () {
+
+    const [username, setUsername] = useState ();
+    const [password, setPassword] = useState ();
+
+    const handleSubmit = async e => {
+
+        e.preventDefault();
+
+        const response = await loginUser ({
+            username,
+            password
+        });
+
+        if ('accessToken' in response) {
+            swal ("Succes", response.message, "Succes", {
+                buttons : false,
+                timer : 2000,
+            })
+        
+        .then ((value) => {
+            localStorage.setItem ('accessToken', response ['accessToken']);
+            localStorage.setItem ('user', JSON.stringify(response ['user']));
+            window.location.href = "/";
+        });
+
+        } else {
+
+            swal ("Failed", response.message, "error");
+        }
+        
+    }
+
 
     return (
 
-    <div>
+        <div>
         <h1 className='titre-inscription'>Saisissez vos informations</h1>
 
-        <form className='form-inscription'>
+        <form className='form-inscription' noValidate onSubmit = {handleSubmit}>
             <label>Nom :</label>
                 <input></input>
             <label>Prénom :</label>
@@ -26,6 +65,9 @@ const SignUp = () => {
     </div>
 
     )
+
+
+
 }
 
-export default SignUp
+

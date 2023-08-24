@@ -450,6 +450,11 @@ background-color: #acfe26;
   margin-left: 30%;
 }
 
+#mdpoublie a {
+  color: white;
+  text-decoration: none;
+}
+
 .login-container {
   display: flex;
   justify-content: center;
