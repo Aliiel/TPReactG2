@@ -12,7 +12,9 @@ const ProductDetail = () => {
         fetch("https://fakestoreapi.com/products/" + params.id)
             .then(response => response.json())
         .then(data => setProduct(data))
-    }, [])
+    }, [params.id])
+
+    
 
     return( 
     <div className='Article'>
@@ -26,7 +28,7 @@ const ProductDetail = () => {
                 <h2>Catégorie : {product.category}</h2>
                 <p>{product.description}</p>
                 <p className='prix'>prix : {product.price}€</p>
-                <bouton className='ajouterPanier'>Ajouter au panier</bouton>
+                <button className='ajouterPanier'>Ajouter au panier</button>
             </div>
         
         </div>
