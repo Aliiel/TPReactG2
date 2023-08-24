@@ -42,6 +42,8 @@ const LoginForm = ({ setConnected }) => {
 
     return (
 
+        <div className='form-cadre'>
+
         <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -57,6 +59,8 @@ const LoginForm = ({ setConnected }) => {
         />
         <button type="submit">Se connecter</button>
       </form>
+
+      </div>
 
     );
 };

@@ -4,15 +4,26 @@ import Logo from '../assets/images/MODB_blanc.png'
 import LogoPanier from '../assets/images/logo-panier.png'
 import LogoRecherche from '../assets/images/logo-loupe.png'
 import SearchBar from './SearchBar';
-import LoginForm from './LoginForm';
-
-
-
+import { useEffect } from 'react';
+import axios from 'axios';
 
 
 
 
 const Header = ({ connected, setConnected }) => {
+
+    useEffect(() => {
+      
+        axios.get('https://fakestoreapi.com/users')
+    
+        .then (response => {
+    
+            setUsers(response.data); 
+        });
+    
+    
+      
+    }, [])
 
     const navigate = useNavigate();
 
@@ -31,7 +42,7 @@ const Header = ({ connected, setConnected }) => {
                 <>
 
                 <div>
-                    <p style = {{color : 'white'}}>Bienvenue, {UserActivation.username}</p>
+                    <p style = {{color : 'white'}}>Bienvenue</p>
                 </div>
                 
                 <div className='connecter authentif'>
