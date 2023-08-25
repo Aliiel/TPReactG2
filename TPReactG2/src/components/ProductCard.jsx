@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductDetail from './ProductDetail';
+import AffiCategories from '../pages/Catégories';
 import { useNavigate } from 'react-router-dom';
 
 

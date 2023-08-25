@@ -1,5 +1,5 @@
-import './App.css'
-import Header from './components/Header'
+import './App.css';
+import Header from './components/Header';
 import {Routes, Route} from "react-router-dom";
 import LoginForm from './components/LoginForm';
 import Cart from './pages/Cart';
@@ -7,8 +7,10 @@ import SignUp from './pages/SignUp';
 import Products from './pages/Home';
 import Footer from './components/Footer';
 import ProductDetail from './components/ProductDetail';
+import AffiCategories from './pages/Catégories';
 import { useState } from 'react';
 import Profile from './pages/Profile';
+
 
 
 
@@ -34,7 +36,7 @@ function App() {
     <Route path ="/Cart" element = {<Cart/>}/>
     <Route path ="/SignUp" element = {<SignUp/>}/>
     <Route path ="/Product/:id" element ={<ProductDetail/>}/>
-    
+    <Route path ="/Product/:category" element ={<AffiCategories/>}/>
     </Routes>
 
 
