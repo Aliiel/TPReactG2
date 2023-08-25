@@ -5,6 +5,7 @@ import React , {useState} from 'react';
 function Cart({ cart, updateCart }) {
     
     const [isOpen, setIsOpen] = useState(true)
+    const articlePrice = 0;
 
     return isOpen ? (
         <div className='lmj-cart'>
@@ -20,6 +21,12 @@ function Cart({ cart, updateCart }) {
         </div>
     ) : (
         <div className='lmj-cart-closed'>
+            <button
+                className='lmj-cart-toggle-button'
+                onClick={() => setIsOpen(true)}
+            >
+                Ouvrir le Paniernpm
+            </button>
             <button
                 className='lmj-cart-toggle-button'
                 onClick={() => setIsOpen(true)}
