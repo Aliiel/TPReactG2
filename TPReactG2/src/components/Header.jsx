@@ -43,7 +43,7 @@ const Header = ({ connected, setConnected }) => {
                 <>
 
                 <div>
-                    <p style = {{color : 'white'}}>Bienvenue</p>
+                    <p style = {{color : 'white'}}>Bienvenue,</p>
                 </div>
                 
                 <div className='connecter authentif'>

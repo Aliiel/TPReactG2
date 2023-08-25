@@ -17,11 +17,11 @@ const ProductCard = ({ product} ) => {
 
 
   return (
-    <div className='Produit' onClick={()=>goToDescription(product.id)}> 
+    <div className='Produit' onClick={()=>goToDescription(product?.id)}> 
    
-    <img src={ product.image }></img> 
-     <p> { product.title }  </p>
-     <p>   { product.price} € </p>
+    <img src={ product?.image }></img> 
+     <p> { product?.title }  </p>
+     <p>   { product?.price} € </p>
     <button className='voir'>Consulter</button>
     
     </div>

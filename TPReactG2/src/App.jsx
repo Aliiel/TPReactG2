@@ -8,9 +8,9 @@ import Products from './pages/Home';
 import Footer from './components/Footer';
 import ProductDetail from './components/ProductDetail';
 import AffiCategories from './pages/Catégories';
+
 import { useState } from 'react';
 import Profile from './pages/Profile';
-
 
 
 
@@ -36,7 +36,8 @@ function App() {
     <Route path ="/Cart" element = {<Cart/>}/>
     <Route path ="/SignUp" element = {<SignUp/>}/>
     <Route path ="/Product/:id" element ={<ProductDetail/>}/>
-    <Route path ="/Product/:category" element ={<AffiCategories/>}/>
+    <Route path ="/category/:category" element ={<AffiCategories/>}/>
+    
     </Routes>
 
 
