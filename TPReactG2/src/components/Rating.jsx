@@ -1,6 +1,6 @@
-import React from 'react'
-import { useState } from 'react'
-import { Rating } from 'react-simple-star-rating'
+import React from 'react';
+import { useState } from 'react';
+import { Rating } from 'react-simple-star-rating';
 
 
 const Stars = () => {
