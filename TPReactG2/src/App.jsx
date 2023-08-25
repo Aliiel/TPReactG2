@@ -1,5 +1,5 @@
-import './App.css'
-import Header from './components/Header'
+import './App.css';
+import Header from './components/Header';
 import {Routes, Route} from "react-router-dom";
 import LoginForm from './components/LoginForm';
 import Cart from './pages/Cart';
@@ -37,6 +37,7 @@ function App() {
     <Route path ="/SignUp" element = {<SignUp/>}/>
     <Route path ="/Product/:id" element ={<ProductDetail/>}/>
     <Route path ="/category/:category" element ={<AffiCategories/>}/>
+    
     </Routes>
 
 
