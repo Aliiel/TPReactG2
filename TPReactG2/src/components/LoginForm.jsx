@@ -36,14 +36,14 @@ const LoginForm = ({ setConnected }) => {
             } 
         }) 
         
-        console.log("fin de la boucle")
+        
     };
 
 
     return (
 
         <div className='form-cadre'>
-
+        <h1 className='login-titre'>Connexion</h1>
         <form onSubmit={handleSubmit}>
         <input
           type="text"

@@ -3,6 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const Login = () => (
   <div>
+  
     <h1 className='login-titre'>Connexion</h1>
     <Formik
       initialValues={{ email: '', password: '' }}
@@ -27,6 +28,7 @@ const Login = () => (
       {({ isSubmitting }) => (
         <Form>
           <div className='form-cadre'>
+           
           <p style = {{color : 'white'}}>E-mail : </p>
           <Field type="email" name="email" />
           <ErrorMessage name="email" component="div" />

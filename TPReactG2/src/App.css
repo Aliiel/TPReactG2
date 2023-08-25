@@ -30,7 +30,11 @@ body{
 h1{
   font-family: 'Archivo Black';
 }
+.titreCatH1{
+  margin-top: 5%;
+  font-size: 3rem;
 
+}
 
 #hero{
   z-index: -1;
@@ -441,16 +445,62 @@ background-color: #acfe26;
 
 
 .form-cadre{
-  background-color: black;
-  margin-bottom: 50px;
-  margin-top : 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width:40%;
-  margin-left: 30%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  height: 600px;
+}
+
+.form-cadre form{
+  font-family: 'RaleWayExtraLight';
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+  padding: 60px;
+ border: 7px solid #acfe26;
+ border-radius: 10px;
+ width: 40%;
+
 }
+
+.form-cadre label{
+  color: white;
+}
+
+.form-cadre input{
+  border-radius: 10px;
+  height: 20px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 8px white;
+  border: none;
+  width: 70%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.form-cadre input::placeholder{
+  text-align: center;
+  font-family: 'RaleWayExtraLight';
+  color: black;
+  font-size: 1.2rem;
+}
+
+.form-cadre button{
+
+  text-align: center;
+  transition: ease-in-out 0.5s;
+}
+
+.form-cadre button:hover{
+  box-shadow: 0px 0px 20px #acfe26 ;
+  text-align: center;
+}
+
 
 #mdpoublie a {
   color: white;
@@ -489,7 +539,7 @@ button:disabled {
   margin-top: 20px;
 }
 
-.form-inscription{
+/* .form-inscription{
   
   background-color: black;
   color: white;
@@ -501,9 +551,9 @@ button:disabled {
   margin-left: 19%;
   display: flex;
   flex-direction: column;
-}
+} */
 
-.form-inscription input {
+/* .form-inscription input {
   width: 200px;
   margin-top: 10px; 
   margin-bottom: 15px;
@@ -512,13 +562,13 @@ button:disabled {
 
 .titre-inscription {
   margin-top: 30px;
-}
+} */
 
 
-.form-inscription button {
+/* .form-inscription button {
   width : 10%;
   align-self: center;
-}
+} */
 
 
 

@@ -44,7 +44,7 @@ export default function SignIn () {
 
     return (
 
-        <div>
+        <div className='form-cadre'>
         <h1 className='titre-inscription'>Saisissez vos informations</h1>
 
         <form className='form-inscription' noValidate onSubmit = {handleSubmit}>
@@ -52,7 +52,7 @@ export default function SignIn () {
                 <input></input>
             <label>Prénom :</label>
                 <input></input>
-                <label>Nom d'utiisateau :</label>
+                <label>Nom d'utilisateur :</label>
                 <input></input>
                 <label>Adresse :</label>
                 <input></input>

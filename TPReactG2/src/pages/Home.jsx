@@ -35,7 +35,7 @@ const Products = () => {
 
 <video id='hero' src=".\src\assets\video\hero.mp4" type='video/mp4' autoPlay loop width="100%"></video>
 
-  <h1>Catégories</h1>
+  <h1 className='titreCatH1'>Catégories</h1>
 
   <div className='categories'>
         {categories.map(category => (

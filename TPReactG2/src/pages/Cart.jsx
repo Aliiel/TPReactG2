@@ -1,6 +1,6 @@
 import React , {useState} from 'react';
 
-
+const articlePrice = null;
 
 function Cart({ cart, updateCart }) {
     
