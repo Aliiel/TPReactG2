@@ -6,20 +6,22 @@ const SignUp = () => {
     return (
 
     <div>
+        <h1 className='titre-inscription'>Saisissez vos informations</h1>
 
-        <form>
+        <form className='form-inscription'>
             <label>Nom :</label>
                 <input></input>
             <label>Prénom :</label>
                 <input></input>
-                <label>Age :</label>
+                <label>Nom d'utiisateau :</label>
                 <input></input>
                 <label>Adresse :</label>
                 <input></input>
-                <label>Téléphone :</label>
+                <label>Code postal :</label>
                 <input></input>
-                <label>Adresse e-mail :</label>
+                <label>Ville :</label>
                 <input></input>
+                <button>Submit</button>
         </form>
     </div>
 
