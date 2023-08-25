@@ -10,6 +10,7 @@ import axios from 'axios';
 
 
 
+
 const Header = ({ connected, setConnected }) => {
 
     useEffect(() => {
@@ -42,7 +43,7 @@ const Header = ({ connected, setConnected }) => {
                 <>
 
                 <div>
-                    <p style = {{color : 'white'}}>Bienvenue</p>
+                    <p style = {{color : 'white'}}>Bienvenue,</p>
                 </div>
                 
                 <div className='connecter authentif'>
