@@ -1,20 +1,24 @@
 import React, { useState,useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , useParams } from 'react-router-dom';
+import ProductCard from './ProductCard';
+import axios from 'axios';
+
 
 
 const CategoryProducts = () => {
-  const [catégory, setCatégory] = useState([])
+  const [category, setCategory] = useState([])
 
-const navigate = useNavigate(CategoryProducts)
-
+const navigate = useNavigate()
+const params = useParams()
   
 
 useEffect(() => {
 
-axios.get('https://fakestoreapi.com/products/categories')
+
+axios.get('https://fakestoreapi.com/products/category/'+params.category)
 .then((response) => 
 
-{setCatégory(response.data)
+{setCategory(response.data)
 
 })
 
@@ -25,7 +29,7 @@ axios.get('https://fakestoreapi.com/products/categories')
 },[]);
 
 const handleClick=(category)=>{
-  navigate("/category/${category}");
+  navigate(`/Product/${category}`);
 
 }
 
@@ -34,17 +38,20 @@ const handleClick=(category)=>{
   <div className='affiche'>
       <h2 className='titre'>Catégories</h2>
 
-   
-     {catégory.length !== 0 && (
-                       <ul className="poster"> 
-                            {catégory.map((cat) => (
-                                <li key={cat} onClick={()=>handleClick(cat)}>{cat}</li>
+   {console.log(category)}
+     {category.length !== 0 && (
+                       <div className="Produits"> 
+                            {category.map((product, index) => (
+                                <div key={index} onClick={()=>handleClick(product.id)}>
+                                  <ProductCard product={product} />
+
+                                </div>
                             ))}
-                        </ul>
+                        </div>
      )}
 
      <div className="article">
-                              <Article/>
+              
      </div>
   
     </div>

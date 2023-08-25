@@ -3,9 +3,7 @@ import Women from '../assets/images/vetement-femme.jpg';
 import Men from '../assets/images/vetement-homme.jpg';
 import Electronique from '../assets/images/electronique.jpg';
 import Jewelery from '../assets/images/jewelery.jpg';
-
-
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 //Selection d'image en fonction du titre
 const CategorieImage = ({ title }) => {
@@ -30,11 +28,12 @@ const CategorieImage = ({ title }) => {
 
 
 const CategorieCard = ({ title }) => {
-//   const navigate =useNavigate();
+const navigate =useNavigate();
+
 
 
 const handleClick=(category)=>{
-  window.location.href = (`/products/${category}`);
+  navigate('/category/'+category);
 }
 
 const TitreCat= () => {
