@@ -20,7 +20,6 @@ const ProductDetail = () => {
     <div className='Article'>
         
         <h1>{product.title}</h1>
-        {console.log(product.title , "Mon Titre")}
         <div className='affichageArticle'>
             <img className='photoProduit' src={product.image}></img>
 
