@@ -1,6 +1,7 @@
 import React, { useEffect , useState } from 'react'
 import ProductCard from './ProductCard'
 import { useParams } from 'react-router-dom';
+import Stars from './Rating';
 
 
 const ProductDetail = () => {
@@ -14,9 +15,10 @@ const ProductDetail = () => {
         .then(data => setProduct(data))
     }, [params.id])
 
-    
+
 
     return( 
+       
     <div className='Article'>
         
         <h1>{product.title}</h1>
@@ -27,19 +29,16 @@ const ProductDetail = () => {
                 <h2>Catégorie : {product.category}</h2>
                 <p>{product.description}</p>
                 <p className='prix'>prix : {product.price}€</p>
+                <Stars/>
                 <button className='ajouterPanier'>Ajouter au panier</button>
             </div>
         
         </div>
         
     </div>
-            
         )
 }
     
    
 
-
-
-
-export default ProductDetail;
+export default ProductDetail

@@ -3,7 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 const Login = () => (
   <div>
-    <h1>Log in please!</h1>
+  
+    <h1 className='login-titre'>Connexion</h1>
     <Formik
       initialValues={{ email: '', password: '' }}
       validate={values => {
@@ -26,13 +27,20 @@ const Login = () => (
     >
       {({ isSubmitting }) => (
         <Form>
+          <div className='form-cadre'>
+           
+          <p style = {{color : 'white'}}>E-mail : </p>
           <Field type="email" name="email" />
           <ErrorMessage name="email" component="div" />
+          <p className='login-mdp' style = {{color : 'white'}}>Mot de passe : </p>
           <Field type="password" name="password" />
           <ErrorMessage name="password" component="div" />
+          <br></br><br></br>
+          <p id = "mdpoublie"><a href = "">Mot de passe oublié ?</a></p>
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>
+          </div>
         </Form>
       )}
     </Formik>
@@ -40,5 +48,3 @@ const Login = () => (
 );
 
 
-
-export default Login

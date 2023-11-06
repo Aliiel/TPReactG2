@@ -6,7 +6,7 @@ function ShoppingList({ cart, updateCart }) {
                 acc.includes(elem.category) ? acc : acc.concat(elem.category),
                 []
         )
-        
+
         return (
             <div className='lmj-shopping-list'>
                 <ul>
@@ -24,6 +24,8 @@ function ShoppingList({ cart, updateCart }) {
                 </ul>
             </div>
         )
-    }
+}
+    
+
     
     export default ShoppingList

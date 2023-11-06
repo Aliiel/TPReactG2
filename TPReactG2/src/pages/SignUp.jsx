@@ -1,29 +1,73 @@
-import React from 'react';
+import React, { useState} from 'react';
 
 
-const SignUp = () => {
+async function loginUser(credentials) {
+
+    return fetch ('https://fakestoreapi.com/users', {
+        method : 'POST'})
+        .then (data => data.json());
+};
+
+export default function SignIn () {
+
+    const [username, setUsername] = useState ();
+    const [password, setPassword] = useState ();
+
+    const handleSubmit = async e => {
+
+        e.preventDefault();
+
+        const response = await loginUser ({
+            username,
+            password
+        });
+
+        if ('accessToken' in response) {
+            swal ("Succes", response.message, "Succes", {
+                buttons : false,
+                timer : 2000,
+            })
+        
+        .then ((value) => {
+            localStorage.setItem ('accessToken', response ['accessToken']);
+            localStorage.setItem ('user', JSON.stringify(response ['user']));
+            window.location.href = "/";
+        });
+
+        } else {
+
+            swal ("Failed", response.message, "error");
+        }
+        
+    }
+
 
     return (
 
-    <div>
+        <div className='form-cadre'>
+        <h1 className='titre-inscription'>Saisissez vos informations</h1>
 
-        <form>
+        <form className='form-inscription' noValidate onSubmit = {handleSubmit}>
             <label>Nom :</label>
                 <input></input>
             <label>Prénom :</label>
                 <input></input>
-                <label>Age :</label>
+                <label>Nom d'utilisateur :</label>
                 <input></input>
                 <label>Adresse :</label>
                 <input></input>
-                <label>Téléphone :</label>
+                <label>Code postal :</label>
                 <input></input>
-                <label>Adresse e-mail :</label>
+                <label>Ville :</label>
                 <input></input>
+                <button>Submit</button>
         </form>
     </div>
 
     )
+
+
+
 }
 
-export default SignUp
+
